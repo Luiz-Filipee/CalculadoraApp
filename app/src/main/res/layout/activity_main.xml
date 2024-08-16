@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main">
+
+    <TextView
+        android:id="@+id/calculadora_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="250dp"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0" />
+
+    <View
+        android:id="@+id/calculadora_separator"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="50dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@id/calculadora_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculadora_value" />
+
+
+    <TextView
+        android:id="@+id/calculadora_AC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="AC"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculadora_separator"
+        app:flow_horizontalBias="10"/>
+
+    <ImageView
+        android:id="@+id/calculadora_back"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/backspace"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_porcentagem"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/calculadora_AC"
+        app:layout_constraintTop_toTopOf="@id/calculadora_AC" />
+
+    <TextView
+        android:id="@+id/calculadora_porcentagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_divisao"
+        app:layout_constraintStart_toEndOf="@id/calculadora_back"
+        app:layout_constraintTop_toTopOf="@id/calculadora_back" />
+
+    <ImageView
+        android:id="@+id/calculadora_divisao"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="300dp"
+        android:src="@drawable/divisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/calculadora_porcentagem"
+        app:layout_constraintTop_toTopOf="@id/calculadora_porcentagem" />
+
+    <TextView
+        android:id="@+id/calculadora_number_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="7"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculadora_AC"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_number_8"/>
+
+    <TextView
+        android:id="@+id/calculadora_number_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_7"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_number_9"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_7"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_7" />
+
+    <TextView
+        android:id="@+id/calculadora_number_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_8"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_divisao"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_8"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_8" />
+
+    <TextView
+        android:id="@+id/calculadora_number_X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_9"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_9" />
+
+
+    <TextView
+        android:id="@+id/calculadora_number_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="4"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculadora_number_7"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_number_5"/>
+
+    <TextView
+        android:id="@+id/calculadora_number_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_4"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_number_6"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_4"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_4" />
+
+    <TextView
+        android:id="@+id/calculadora_number_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_5"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_divisao"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_5"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_5" />
+
+    <TextView
+        android:id="@+id/calculadora_number_menos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_6"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_6" />
+
+    <TextView
+        android:id="@+id/calculadora_number_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="33dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculadora_number_4"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_number_2"/>
+
+    <TextView
+        android:id="@+id/calculadora_number_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_1"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_number_3"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_1"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_1" />
+
+    <TextView
+        android:id="@+id/calculadora_number_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_2"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_divisao"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_2"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_2" />
+
+    <TextView
+        android:id="@+id/calculadora_number_mais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_3"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_3" />
+
+    <ImageView
+        android:id="@+id/calculadora_number_rotate_tela"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="33dp"
+        android:src="@drawable/divisor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculadora_number_1"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_number_0"/>
+
+    <TextView
+        android:id="@+id/calculadora_number_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_rotate_tela"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_number_2"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_rotate_tela"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_rotate_tela" />
+
+    <TextView
+        android:id="@+id/calculadora_virgula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=","
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_number_0"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_number_0"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_number_0"
+        app:layout_constraintEnd_toStartOf="@id/calculadora_result"/>
+
+    <ImageView
+        android:id="@+id/calculadora_result"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/equals"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_virgula"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_virgula"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_virgula" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
